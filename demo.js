@@ -6,6 +6,7 @@ mpdConnection(port).then(conn => {
     conn.status().then(res => {
         console.log(res);
         process.exit();
-    });
-})
-
+    }, err => {
+        console.log(err);
+    })
+});

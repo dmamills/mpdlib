@@ -4,7 +4,9 @@ const net = require('net');
 const MpdClient = require('./MpdClient');
 
 const mpdConnection = (port) => {
+
     return new Promise((res, rej) => {
+        
         let client = net.connect({port:port}, () => {
             client.once('data', d => {
                 d = d.toString();
