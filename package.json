@@ -1,12 +1,12 @@
 {
   "name": "mpdlib",
   "version": "1.0.0",
-  "description": "",
-  "main": "demo.js",
+  "description": "Promise based client for interacting with a mpd daemon",
+  "main": "src/mpdConnection.js",
   "scripts": {
     "test": "jasmine"
   },
-  "author": "",
+  "author": "Daniel Mills",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {

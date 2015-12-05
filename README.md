@@ -9,9 +9,11 @@ requires node `v5.0.0+`
 ```
 const mpdConnection = require('mpdlib');
 const port = process.env.MPD_PORT || 6600;
+const host = process.env.MPD_HOST || 'localhost';
+const password = 'topsecretmusicpassword'
 
-mpdConnection(port).then(conn => {
-    conn.command('play').then(res => {
+mpdConnection(host, port, password).then(conn => {
+    conn.command('listall').then(res => {
         console.log(d.toString()); // "OK"
     });
 });
